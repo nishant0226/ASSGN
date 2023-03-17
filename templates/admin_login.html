@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+</head>
+<body>
+  <h1>Admin Login</h1>
+  {% if error %}
+    <p>{{ error }}</p>
+  {% endif %}
+  <form method="POST" action="{{ url_for('admin_login') }}">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>
